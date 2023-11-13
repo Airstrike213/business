@@ -5,15 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="StyleSheet.css">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js">
-    $(document).ready(function() {
-        $('#cardContainer').on('click', function() {
-            $(this).toggleClass('is-flipped');
-        });
-    });
-</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
    <style>
-               .card {
+        .card {
             perspective: 1000px;
         }
 
@@ -24,7 +18,7 @@
             transition: transform 0.5s;
         }
 
-        .card.is-flipped .card-inner {
+        .card:hover .card-inner {
             transform: rotateY(180deg);
         }
 
@@ -38,7 +32,6 @@
 
         .card-back {
             transform: rotateY(180deg);
-            display: none; /* Initially hide the back side */
         }
     </style>
 </head>
@@ -87,7 +80,7 @@
             </div>
         </div>
     </div>
-      <div class="daw-col l4 m6 daw-margin-bottom">
+       <div class="daw-col l4 m6 daw-margin-bottom">
         <div class="card" id="cardContainer">
             <div class="card-inner">
                 <div class="card-front">
